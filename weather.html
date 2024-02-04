@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .frame{
+            width: 50%;
+            height: 100vh;
+            border: 1px solid black;
+            background-image: radial-gradient(white 10%, rgb(33, 33, 235) 90%);
+        }
+        .title{
+            text-align: center;
+            color: red;
+            font-family: arial;
+            
+        }
+        .location{
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            margin-left: 10px;
+            font-family:arial;
+            font-size:18px;
+            justify-content: space-between;
+            display: flex;
+            
+        }
+        .status{
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            margin-left: 10px;
+            font-family:arial;
+            font-size: 10px;
+        }
+        .bi-three-dots{
+            margin-right: 10px; 
+            margin-left: 10px;
+           
+        }
+        .bi-cloud-rain-fill{
+            font-family: arila;
+            color: white;
+            font-size: 50px;
+            text-shadow: 1px 1px 1px black; 
+           
+        }
+        .second{
+           display: flex;
+            padding: 30px;
+        }
+        .celcius{
+            font-family: arial;
+            font-size: 45px;
+            margin-left: 22px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+
+        }
+        .degree{
+            
+         color: white;
+         text-shadow: 1px 1px 1px black;
+         margin-left: 20px;
+         font-family: arial;
+         font-weight: bold;
+       
+        
+        }
+        .temprature{
+           padding-left: 10px;
+           margin-left: 51px;
+           font-family: arial;
+           font-weight: bold;
+           color: white;
+           text-shadow: 1px 1px 1px black;
+           
+        }
+        .humidity{
+            padding-left: 20px;
+           margin-left: 100px;
+           font-family: arial;
+           color: white;
+           font-size: 11px;
+        }
+        .date{
+            margin-left: 30px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+        .slider{
+            width:100%;
+           
+        }
+        .interval{
+            margin-top: 0px;
+            color: black;
+        }
+       .time{
+        margin-top: 60px;
+        
+       }
+    
+       .card-header{
+        padding: 5px;
+        font-family: arial;
+        font-weight: bold;
+       }
+    .bi-cloud-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .card-footer{
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 10px;
+        color: white;
+        margin-left: 5px;
+    }
+    .container{
+        display: flex;
+        margin-top: 60px;
+    }
+    .card{
+        padding: 10px;
+        width: 150px;
+        box-shadow: 1px 1px 1px gray;
+        margin:1px;
+        background-color: rgb(104, 154, 154);
+        
+    }
+    .bi-cloud-fog-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-cloud-drizzle-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-sun-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-cloud-rain-heavy-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-cloud-lightning-rain-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-cloud-rain{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    .bi-cloud-rain-fill{
+        margin-top: 30px;
+        font-size: 30px;
+        padding: 10px;
+        color: white;
+    }
+    
+    
+       
+
+ 
+    </style>
+</head>
+<body>
+   <section class="frame">
+         <div class="adress">
+            <span class="location">Amerpet TG<sapn class="bi bi-share-fill"><span class="bi bi-three-dots"></span></sapn></span>
+            <span class="status">update few second ago.</span>
+         </div>
+
+
+
+         <div class="second">
+                 <div>
+                    <span class="bi bi-cloud-rain-fill"></span>
+                  </div>
+                  <div>
+                    <span class="celcius">31</span>
+                  </div>
+                  <div class="degree">
+                     
+                        C&deg;<br>
+                        -<br>
+                        F
+                  
+                  </div>
+                  <div class="temprature">
+                    28&deg;<br>
+                    &nbsp;<br>
+                    21&deg;<br>
+           
+                  </div>
+                  <div class="humidity">
+                    Precipitation:3%<br>
+                    &nbsp;<br>
+                    Wind:12KMPH<br>
+                    &nbsp;<br>
+                    Humidty:71%
+                  </div>
+             </div>
+
+            <div class="date">
+                Rainy-wed 9,01:45pm
+            </div>
+            <div class="time">
+            12pm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3pm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6pm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9pm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12am &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3am &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6pm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9pm
+            </div>
+         <div class="interval">
+            <input type="range" value="1" class="slider">
+         </div>
+
+
+
+
+        <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <span>11AM<br></span>
+            </div>
+            <div>
+                <span class="bi bi-cloud-fill"><br</span>
+            </div>
+                <div class="card-footer">
+                    <span>30&deg;<br></span>
+                    <span>20&deg;<br></span>
+                </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>12AM<br></span>
+                    </div>
+                    <div>
+                        <span class="bi bi-cloud-fog-fill"><br</span>
+                    </div>
+                        <div class="card-footer">
+                            <span>30&deg;<br></span>
+                            <span>23&deg;<br></span>
+                        </div>
+                        </div>
+                        <div class="card">
+            <div class="card-header">
+                <span>01PM<br></span>
+            </div>
+            <div>
+                <span class="bi bi-cloud-drizzle-fill"><br</span>
+            </div>
+                <div class="card-footer">
+                    <span>30&deg;<br></span>
+                    <span>24&deg;<br></span>
+                </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span>02PM<br></span>
+                    </div>
+                    <div>
+                        <span class="bi bi-sun-fill"><br</span>
+                    </div>
+                        <div class="card-footer">
+                            <span>30&deg;<br></span>
+                            <span>23&deg;<br></span>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span>03PM<br></span>
+                            </div>
+                            <div>
+                                <span class="bi bi-cloud-rain-heavy-fill"><br</span>
+                            </div>
+                                <div class="card-footer">
+                                    <span>30&deg;<br></span>
+                                    <span>20&deg;<br></span>
+                                </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <span>04PM<br></span>
+                                    </div>
+                                    <div>
+                                        <span class="bi bi-cloud-lightning-rain-fill"><br</span>
+                                    </div>
+                                        <div class="card-footer">
+                                            <span>30&deg;<br></span>
+                                            <span>18&deg;<br></span>
+                                   </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                               <span>05PM<br></span>
+                                          </div>
+                              <div>
+                       <span class="bi bi-cloud-rain-fill"><br</span>
+                        </div>
+                      <div class="card-footer">
+                           <span>30&deg;<br></span>
+                     <span>20&deg;<br></span>
+                      </div>
+                       </div>
+                                 <div class="card">
+                           <div class="card-header">
+                             <span>06PM<br></span>
+                                </div>
+                         <div>
+                 <span class="bi bi-cloud-rain"><br</span>
+                </div>
+                   <div class="card-footer">
+                     <span>30&deg;<br></span>
+                       <span>22&deg;<br></span>
+                </div>
+           </div>
+                 </div>
+                
+                            
+                
+   </section>
+</body>
+</html> 
