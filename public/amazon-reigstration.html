@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registrations</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        form{
+           border: 1px solid gray;
+           border-radius: 10px;
+           height: 120vh;
+           width: 400px;
+        }
+       body {
+                 justify-content: center;
+                 display: flex; 
+                 margin-left: 400px;
+                 padding-top: 15px;
+        }
+        .image{
+             margin-left:120px;
+        }
+        .name-input{
+            width: 350px;
+        }
+        .mob-input{
+            width: 265px;
+        }
+        .input-email{
+            width: 350px;
+        }
+       .input-pas{
+        width:350px;
+       }
+       .input-fn{
+        width: 80px;
+       }
+       .link a{
+        text-decoration: none;
+       }
+       
+     </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/Screenshot 2023-08-20 090140.png" width="110px" height="50px" class="image">
+        <form>
+                <h2 class="p-4">Create Account</h2>
+        <div>
+            <dl class="ms-4" style="font-size:small;">
+                <dt>Your name</dt>
+                <input type="text" class="form-control name-input"   size="50" placeholder="first and last name">
+            </dl>
+        </div>
+           <div class="ms-2">
+            <span class="ms-3" style="font-size:small;"><b>Mobile number</b><br></span>
+            <div class="d-flex ms-3">
+                <select class="me-2 form-control input-fn">
+                    <option>IN +91</option>
+                    <option>IR +1</option>
+                    <option>UK +63</option>
+                </select>
+                <input type="text" class="form-control mob-input" placeholder="Mobile number" size="20px">
+            </div>
+        </div>
+        
+        <div class="ms-4 mt-2" style="font-size: small;">
+            <dl>
+                <dt>Email(optional)</dt>
+                <input type="text" class="form-control input-email" size="50">
+            </dl>
+        </div>
+        <div class="ms-4 mt-2" style="font-size: small;">
+            <dl>
+                <dt>Password</dt>
+                <input type="password" class=" form-control  input-pas" size="50" placeholder="At lest 6 characters">
+                <div>
+                <span class="bi bi-exclamation-lg">Password must be atleast 6 characters</span>
+            </div>
+        </div>
+            </dl>
+            <div class="mt-4 ms-4">
+                <span class="ms-0" style="font-size: small;">
+                    To verify your number, we will send you a text<br> message with a temporary code. Message and data rates may apply.</b>
+                </span>
+            </div>
+            <div class="mt-4 ">
+                <button class="btn btn-warning ms-3" style="width: 90%; padding: 6px 0; line-height: 1;">Continue</button>
+            </div>
+            <div class="ms-4 mt-2">
+                <span class="link" style="font-size: small;">Alredey have an Account?<a href="sign in"> Sign in<span class="bi bi-chevron-compact-right"></span></a></span>
+            </div>
+            <div class="ms-4 mt-2">
+                <span class="link" style="font-size: small;">Buying for work?<a href="sign in"> Create a free business account<span class="bi bi-chevron-compact-right"></span></a></span>
+            </div>
+            <div class="ms-4 mt-2">
+                <span class="link" style="font-size: small;">By creating an account or logging in, you agree to Amazon’s<a href="condition of use"> Condition of use</a> and<a href="privacy-policy"> privacy-policy.</a></span>
+            </div>
+            
+       
+    </form>
+    </div>
+</body>
+</html>

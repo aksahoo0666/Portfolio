@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        @keyframes slideIn {
+            from {
+                margin-left: 110%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+    </style>
+    <script>
+        function LoadProduct(id){
+            fetch(`http://fakestoreapi.com/products/${id}`)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(product){
+                DisplayImage();
+                document.getElementById("lblPrice").innerHTML = "$" + product.price;
+                document.getElementById("imgProduct").src = product.image;
+                document.getElementById("rating").innerHTML = `${product.rating.rate} <span class="bi bi-star-fill text-success"></span>`;
+                document.getElementById("description").innerHTML = product.description;
+            })
+        }
+        function bodyload(){
+            LoadProduct(1);
+        }
+
+        function DisplayImage(){
+            document.getElementById("imgProduct").style.animationName = "slideIn";
+            document.getElementById("imgProduct").style.animationDuration = "2s";
+        }
+
+        var id = 1;
+        function NextClick(){
+            id++;
+            LoadProduct(id);
+            DisplayImage();
+        }
+        function PrevClick(){
+            id--;
+            LoadProduct(id);
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center" onload="bodyload()">
+    <div class="card p-3 m-2 w-50">
+        <div class="card-header text-center">
+            <span class="h4" id="lblPrice"></span>
+        </div>
+        <div class="card-body overflow-hidden position-relative">
+            <div id="rating" class="badge p-3 m-1 position-absolute top-0 end-0 bg-dark fs-5 text-white fw-bold rounded-circle">
+
+            </div>
+            <img width="100%" height="300" id="imgProduct">
+            <div style="height: 50px; overflow: auto;">
+                <p id="description"></p>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <button onclick="PrevClick()" class="bi bi-chevron-left btn btn-outline-success"> </button>
+            <button onclick="NextClick()" class="bi bi-chevron-right btn btn-outline-warning"></button>
+        </div>
+    </div>
+</body>
+</html>

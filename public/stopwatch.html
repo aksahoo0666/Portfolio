@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var task;
+        var ms=0;
+        var setSec=0;
+        var setMin=0;
+        var hour=0;
+        function LoadCount(){
+            var time=document.getElementById("time").innerHTML=`${hour}h:${setMin}m:${setSec}s:${ms}`;
+              ms++;
+              if(ms==10){
+                setSec++;
+                ms=0
+              } 
+              if(setSec==60){
+                setMin++;
+                setSec=0;
+              } 
+              if(setMin==60)
+              {
+                hour++;
+                setMin=0;
+              }  
+        }
+        function bodyLoad(){
+             LoadCount();
+        }
+        function pauseClick(){
+               clearInterval(task);
+               document.getElementById("btnResume").style.display="inline-block";
+        }
+        function resumeClick(){
+            task=setInterval(LoadCount,100);  
+            document.getElementById("btnResume").style.display="none";
+        }
+        function resetClick(){
+            time.innerHTML=0;
+            clearInterval(task);
+            ms=0;
+            setSec=0;
+            setMin=0;
+            hour=0;
+            document.getElementById("btnResume").style.display="inline-block";
+           
+        }
+    </script>
+</head>
+<body onload="bodyLoad()" class="d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
+  <div>
+    <h2>STOPWATCH</h2>
+  
+  
+    <div style="border: 3px solid black; padding:60px; border-radius: 10px;">
+    <div>
+       <h3> <span id="time">0</span></h3>
+    </div>
+    <div class="mt-5">
+        <button onclick="resetClick()" class="bi bi-arrow-clockwise btn btn-outline-success"></button>
+        <button id="btnPause" onclick="pauseClick()" class="bi bi-pause btn btn-danger"></button>
+        <button id="btnResume" onclick="resumeClick()" class="bi bi-play btn btn-success"></button>
+    </div>
+    </div>
+  </div>
+    
+</body>
+</html>

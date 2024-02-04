@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-calculator</BMI-calculator></title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        form{
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <form class="w-50 ">
+    <div class="text-white p-2 ms-5">
+        <h4>BMI Calculator for Child and Teen</h4>
+    </div>
+    <div>
+        <select class="ms-5">
+            <option>English</option>
+        </select>
+    </div>
+    <div class="text-white ms-5">
+        <span>
+            <input type="radio" name="unit" id="english" checked>
+            <label for="english">English</label>
+        </span>
+        <span>
+            <input type="radio" name="unit" id="metric">
+                <label for="metric">Metric</label>
+        </span>
+    </div>
+    <div class="text-white ms-4">
+        .......................................................................................................................................................................
+    </div>
+    <div>
+        <span class="ms-5 text-white">
+            <input type="radio" name="age" id="year">
+            <label for="year">Age: Years, Months</label>
+        </span>
+        <span class="ms-5 text-white">
+            <input type="radio" name="age" id="mesurment">
+            <label for="mesurment"> Date of Birth, Date of Measurement</label>
+        </span>
+    </div>
+    <div class="row text-white">
+        <div class="col-5">
+        <dl class="ms-5 text-white">
+            <dt class="ms-4">Age :</dt>
+            <dd><input type="text" size="3" class="ms-4"> &nbsp;years 2to 19 </dd>
+        </dl>
+    </div>
+    <div class="col-7">
+        <dl class="ms-5 text-white mt-4">
+            <dd><input type="text" size="3">months (0 to 11)</dd>
+        </dl>
+    </div>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;or enter only the total number of months:
+    </div>
+    <div class="ms-4">
+        <input type="text" size="4" class="ms-5">
+    </div>
+    <div class="text-white ms-4">
+        .......................................................................................................................................................................
+    </div>
+    <div class="ms-5 text-white">
+        <dl>
+            <dt>Sex :</dt>
+            <input type="radio" name="male" id="boys">
+            <label for="boys">Boy</label>
+
+ <input type="radio" name="male" id="girl">
+            <label for="girl">Girl</label>
+        </dl>
+        
+    </div>
+    <div class="text-white ms-4">
+        .......................................................................................................................................................................
+    </div>
+   <div class="ms-5 text-white">
+    <span>
+        <input type="radio" name="height" value="inches">
+        <label for="inches">Height: inches</label>
+    </span>
+    <span class="ms-3">
+        <input type="radio" name="height" value="ft">
+        <label for="ft">Height: ft,inch,fraction</label>
+    </span>
+    <div class="mt-3">
+        <b>Height</b>,to nearest 0.1 inch:<br>
+        <input type="text" size="5" class="mt-2"> inches
+   </div>
+   </div>
+   <div class="text-white ms-4">
+    .......................................................................................................................................................................
+</div>
+<div class="ms-5 text-white">
+    <span>
+        <input type="radio" name="height" value="inches">
+        <label for="inches">Weight:Lbs</label>
+    </span>
+    <span class="ms-3">
+        <input type="radio" name="height" value="ft">
+        <label for="ft">Weight: Lbs, Fraction</label>
+    </span>
+    <div class="mt-3">
+        <b>Weight</b>,Lbs to the nearest 0.1:<br>
+        <input type="text" size="5" class="mt-2">lbs
+   </div>
+   </div>
+   <div class="text-white ms-4">
+    .......................................................................................................................................................................
+</div>
+<div class="text-center">
+    <button class="btn btn-warning" class="text-white">Calculate</button>
+</div>
+
+
+
+</form>
+</body>
+</html>
