@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+
+        .grid-container {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           background-color: rgb(228, 224, 216);
+        }
+
+        .ad3 h6{
+            margin-top: 50px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        section option:hover {
+            background-color: lawngreen;
+        }
+
+        .bi-border-all:hover {
+            background-color: lawngreen;
+        }
+        .freshkart{
+            background-color: rgb(178, 220, 206);
+        }
+        .color{
+            background-color: rgb(197, 231, 220);
+            margin-top: 20px;          
+        }
+        .colorr{
+            background-color: rgb(236, 237, 221);
+            margin-top: 20px;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div  class="justify-content-around d-flex">
+        <div class="p-4 me-5">
+            <h3><span class="bi bi-cart4" style="color: green;"></span>FreshCart</h3>
+        </div>
+        <div class="p-4">
+            <input type="text" placeholder="Search for products.." class="form-control" size="50">
+        </div>
+        <div class="p-4 mt-1">
+            <span class="bi bi-geo-alt border border-1 rounded-1 p-2">Location</span>
+        </div>
+        <div class="p-4">
+            <button class="bi bi-heart btn position-relative">
+             <span class="badge bg-success text-white rounded-circle position-absolute top-0 end-0">5</span>
+            </button>
+            <span class="bi bi-person ms-2"></span>
+            <button class="bi bi-bag-check btn position-relative">
+                <span class="badge bg-success text-white rounded-circle position-absolute top-0 end-0">5</span>
+            </button>
+           
+        </div>
+    </div>
+    <div class="justify-content-between ">
+        <div class="ms-5 p-4">
+            <span class="bi bi-border-all p-2"> &nbsp;All Departments</span>
+            <span class="me-2 p-2"><select>
+                <option value="Home">Home</option>
+                <option>Home1</option>
+                <option>Home2</option>
+                <option>Home3</option>
+                <option>Home4</option>
+                <option>Home5</option>
+            </select></span>
+            <span class="me-2 p-2"><select><option value="shop">Shop</option></select></span>
+            <span class="me-2 p-2"><select><option value="store">Store</option></select></span>
+            <span class="me-2 p-2"><select><option value="Mega menu">Mega menu</option></select></span>
+            <span class="me-2 p-2"><select><option value="Pages">Pages</option></select></span>
+            <span class="me-2 p-2"><select><option value="Accounts">Accounts</option></select></span>
+            <span class="me-2 p-2"><select><option value="Docs">Docs</option></select></span>
+        </div>
+    </div>
+    </header>
+    <section>
+        <div class="carousel slide carousel-dark" id="banners" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <div class="color">
+                        <div class="row">
+                            <div class="col mt-5">
+                               <span class="bg-warning border rounded-2 ms-4 mt-4 fw-bold p-1">Opening Sale Discount 50%</span>
+                               <div class="mt-4 ms-4">
+                                <h1>SuperMarket Daliy<br>Fresh Grocery</h1>
+                               </div>
+                               <div>
+                                <span class="mt-4 ms-4">Introduced a new model for online grocery shopping<br> &nbsp;&nbsp;&nbsp;&nbsp; and conveninet home delivery.</span>
+                               </div>
+                               <div class="mt-4 ms-4">
+                                <button class="bg-dark text-white border rounded-2 p-2">Shop Now &nbsp; <span class="bi bi-arrow-right"></span> &nbsp;</button>
+                               </div>
+                            </div>
+                            <div class="col">
+                                <img src="images/freshkart-ad1.png" style="height: 500px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="colorr">
+                        <div class="row">
+                            <div class="col mt-5">
+                               <span class="bg-warning border rounded-2 ms-4 mt-4 fw-bold p-1">Free shipping - orders over $100 </span>
+                               <div class="mt-4 ms-4">
+                                <h1>Free shipping<br> on orders over $100</h1>
+                               </div>
+                               <div>
+                                <span class="mt-4 ms-4">Free Shipping to First-Time Customers Only<br> &nbsp;&nbsp;&nbsp;&nbsp; After Promotion and Discount applied.</span>
+                               </div>
+                               <div class="mt-4 ms-4">
+                                <button class="bg-dark text-white border rounded-2 p-2">Shop Now &nbsp; <span class="bi bi-arrow-right"></span> &nbsp;</button>
+                               </div>
+                            </div>
+                            <div class="col">
+                                <img src="images/freshkart-ad2.png" style="height: 500px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            </div>
+        </div>
+        
+        <div>
+            <h2 class="ms-5 mt-5">Featured Categories</h2>
+            <div class="d-flex mt-5 mb-3">
+                <div class="card ms-4">
+                    <div class="card-body">
+                        <img src="images/freshcart-1.png"width="100%" height="80%">
+                        <div class="text-center">Dairy,Bread & Eggs</div>
+                    </div>
+                </div>
+                <div class="card ms-4">
+                    <div class="card-body">
+                        <img src="images/freshcart-2.png"width="100%" height="80%">
+                        <div class="text-center">Baby Care</div>
+                    </div>
+                </div>
+                <div class="card ms-4">
+                    <div class="card-body">
+                        <img src="images/freshcart-3.png" width="100%" height="80%">
+                        <div class="text-center">Snack & Munchies</div>
+                    </div>
+                </div>
+                <div class="card ms-4">
+                    <div class="card-body">
+                        <img src="images/freshcart-4.png"width="100%" height="80%">
+                        <div class="text-center">Bakery & Biscuits</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 ms-5">
+            <div class="row">
+                <div class="col">
+                    <div class="grid-container">
+                        <div class="ad3">
+                            <h6 class="ms-4">Fruits & vegetables</h6>
+                            <div> &nbsp;&nbsp;&nbsp;&nbsp; Get up to 30% off</div>
+                            <button class="mt-4 ms-4 bg-dark text-white rounded-2 p-1">Shop Now &nbsp;</button>
+                        </div>
+                        <div class="heading">
+                            <img src="images/freshkart-ad3.png" width="100%">
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="grid-container">
+                        <div class="ad3">
+                            <h6 class="ms-4">Freshly Baked Buns</h6>
+                            <div> &nbsp;&nbsp;&nbsp;&nbsp; Get up to 30% off</div>
+                            <button class="mt-4 ms-4 bg-dark text-white rounded-2 p-1">Shop Now &nbsp;</button>
+                        </div>
+                        <div class="heading">
+                            <img src="images/freshkart-ad4.png" width="100%">
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

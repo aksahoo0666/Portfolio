@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var cities=["Delhi","Hyd"];
+
+            function bodyLoad(){
+            document.getElementById("lstCities").innerHTML="";
+            cities.map(function(city){
+               var option=document.createElement("option");
+                option.text=city;
+                option.value=city;
+                document.getElementById("lstCities").appendChild(option);
+            })
+            document.getElementById("lblCount").innerHTML=`Total No of cities:${cities.length}`
+        }
+        function AddClick(){
+            var cityName=document.getElementById("txtCity").value;
+            if(cities.indexOf(cityName)==-1)
+            {
+                cities.push(cityName);
+            alert(`${cityName} Add to List`)
+            bodyLoad();
+           document.getElementById("txtCity").value="";
+            }
+           else{
+            alert(`${cityName} Exists`)
+           }
+        }
+        function SortAsc()
+        {
+            cities.sort();
+            bodyLoad();
+        }
+        function SortDsc(){
+            cities.sort();
+            cities.reverse();
+            bodyLoad();
+        }
+        function RemoveSelected(){
+            var selectCity=document.getElementById("lstCities").value;
+            var cityIndex=cities.indexOf(selectCity);
+            var choice=confirm(`Are you sure?\nWant to delete ${selectCity}`);
+            if(choice==true)
+            {
+                cities.splice(cityIndex,1);
+                bodyLoad();
+            }
+        }
+        function RemoveAll()
+        {
+            var choice=confirm(`Are you sure?\n want to delete All`)
+            if(choice==true){
+                cities.length=0;
+                bodyLoad();
+            }
+        }
+      
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+   <fieldset class="w-25">
+    <legend>Array Manipulations</legend>
+    <div>
+        <label class="form-label fw-bold">New City</label>
+        <div class="input-group">
+            <input type="text" id="txtCity" class="form-control"><button onclick="AddClick()" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+    <div class="mt-2 mb-2">
+        <button onclick="SortAsc()" class= "bi bi-sort-alpha-down btn btn-outline-success"></button>
+        <button onclick="SortDsc()" class="bi bi-sort-alpha-up btn btn-outline-warning" id></button>
+    </div>
+    <div class="mt-4" >
+        <select class="form-select" size="4" id="lstCities">
+            
+
+        </select>
+        <lable id="lblCount" class="form-lable fw-bold"></lable>
+    </div>
+    <div class="mt-3 mb-3">
+        <button onclick="RemoveSelected()" class="bi bi-trash btn btn-danger">Remove Selected</button>
+        <button onclick="RemoveAll()" class="bi bi-trash btn btn-outline-danger">Clear All</button>
+    </div>
+   </fieldset>
+</body>
+</html>
